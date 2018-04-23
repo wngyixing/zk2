@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电脑分列</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <script type="text/x-handlebars-template" id="tpl">
+            {{#each data}}
+            <ul>
+                <li><span>-</span>{{name}}
+                    <div>
+                        {{#each children}}
+                        <ol>
+                            <li><span>-</span>{{name}}
+                                <div>
+                                    {{#each children}}
+                                    <ol>
+                                        <li><span>-</span>{{name}}
+                                            <div>
+                                                {{#each children}}
+                                                <ol>
+                                                    <li><span>-</span>{{name}}
+
+                                                    </li>
+                                                </ol>
+                                                {{/each}}
+                                            </div>
+                                        </li>
+                                    </ol>
+                                    {{/each}}
+                                </div>
+                            </li>
+                        </ol>
+                        {{/each}}
+                    </div>
+
+                </li>
+            </ul>
+            {{/each}}
+        </script>
+
+
+    </div>
+</body>
+<script src="../static/js/lib/require.js"></script>
+<script>
+    require(["../static/js/page/config.js"], function() {
+        require(["../page/main"])
+    })
+</script>
+
+</html>

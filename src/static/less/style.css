@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #333;
+}
+html,
+body {
+  background: cornflowerblue;
+}
+html .wrap,
+body .wrap {
+  width: 100%;
+  padding: 50px;
+}
+html .wrap > h1 span,
+body .wrap > h1 span {
+  margin: 0 6px;
+  font-size: 18px;
+}
+html .wrap > h2,
+body .wrap > h2 {
+  padding: 0 80px;
+}
+html .wrap > h3,
+body .wrap > h3 {
+  padding: 0 150px;
+}
+html .wrap > h4,
+body .wrap > h4 {
+  padding: 0 240px;
+}
